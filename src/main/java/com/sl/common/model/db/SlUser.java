@@ -10,6 +10,7 @@ public class SlUser implements Serializable {
 	private Long uId;
 	private String bdId;
 	private String uNm;
+	private String uThirdid;
 	private String uPhone;
 	private String uEmail;
 	private String uPwd;
@@ -43,6 +44,14 @@ public class SlUser implements Serializable {
 
 	public void setuNm(String uNm) {
 		this.uNm = uNm;
+	}
+
+	public String getuThirdid() {
+		return uThirdid;
+	}
+
+	public void setuThirdid(String uThirdid) {
+		this.uThirdid = uThirdid;
 	}
 
 	public String getuPhone() {
@@ -136,7 +145,7 @@ public class SlUser implements Serializable {
 		this.uptTs = uptTs;
 	}
 	
-	public SlUser(Long uId, String bdId, String uNm, String uPhone,
+	public SlUser(Long uId, String bdId, String uNm, String uThirdid, String uPhone,
 			String uEmail, String uPwd, String roleId, Integer uActive,
 			Integer uDisabled, Long uIcon, String uAvatar, Long crtTs,
 			Long uptTs) {
@@ -144,6 +153,7 @@ public class SlUser implements Serializable {
 		this.uId = uId;
 		this.bdId = bdId;
 		this.uNm = uNm;
+		this.uThirdid = uThirdid;
 		this.uPhone = uPhone;
 		this.uEmail = uEmail;
 		this.uPwd = uPwd;
