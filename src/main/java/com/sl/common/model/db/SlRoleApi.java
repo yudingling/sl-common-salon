@@ -35,28 +35,28 @@ public class SlRoleApi implements Serializable {
 	public void setApiUrl(String apiUrl) {
 		this.apiUrl = apiUrl;
 	}
-	public int getHttpGet() {
+	public Integer getHttpGet() {
 		return httpGet;
 	}
-	public void setHttpGet(int httpGet) {
+	public void setHttpGet(Integer httpGet) {
 		this.httpGet = httpGet;
 	}
-	public int getHttpPost() {
+	public Integer getHttpPost() {
 		return httpPost;
 	}
-	public void setHttpPost(int httpPost) {
+	public void setHttpPost(Integer httpPost) {
 		this.httpPost = httpPost;
 	}
-	public int getHttpPut() {
+	public Integer getHttpPut() {
 		return httpPut;
 	}
-	public void setHttpPut(int httpPut) {
+	public void setHttpPut(Integer httpPut) {
 		this.httpPut = httpPut;
 	}
-	public int getHttpDelete() {
+	public Integer getHttpDelete() {
 		return httpDelete;
 	}
-	public void setHttpDelete(int httpDelete) {
+	public void setHttpDelete(Integer httpDelete) {
 		this.httpDelete = httpDelete;
 	}
 	public Long getCrtTs() {
@@ -76,8 +76,9 @@ public class SlRoleApi implements Serializable {
 		super();
 	}
 	
-	public SlRoleApi(Long roaId, String roleId, String apiUrl, int httpGet,
-			int httpPost, int httpPut, int httpDelete, Long crtTs, Long uptTs) {
+	public SlRoleApi(Long roaId, String roleId, String apiUrl, Integer httpGet,
+			Integer httpPost, Integer httpPut, Integer httpDelete, Long crtTs,
+			Long uptTs) {
 		super();
 		this.roaId = roaId;
 		this.roleId = roleId;
