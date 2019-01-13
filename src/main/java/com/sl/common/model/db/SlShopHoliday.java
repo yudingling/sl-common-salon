@@ -10,6 +10,7 @@ public class SlShopHoliday implements Serializable {
 	private Long sofId;
 	private String bdId;
 	private Long shopId;
+	private String sofDesc;
 	private Long sofStm;
 	private Long sofEtm;
 	private Long crtTs;
@@ -32,6 +33,12 @@ public class SlShopHoliday implements Serializable {
 	}
 	public void setShopId(Long shopId) {
 		this.shopId = shopId;
+	}
+	public String getSofDesc() {
+		return sofDesc;
+	}
+	public void setSofDesc(String sofDesc) {
+		this.sofDesc = sofDesc;
 	}
 	public Long getSofStm() {
 		return sofStm;
@@ -62,12 +69,13 @@ public class SlShopHoliday implements Serializable {
 		super();
 	}
 	
-	public SlShopHoliday(Long sofId, String bdId, Long shopId, Long sofStm, Long sofEtm,
-			Long crtTs, Long uptTs) {
+	public SlShopHoliday(Long sofId, String bdId, Long shopId, String sofDesc, 
+			Long sofStm, Long sofEtm, Long crtTs, Long uptTs) {
 		super();
 		this.sofId = sofId;
 		this.bdId = bdId;
 		this.shopId = shopId;
+		this.sofDesc = sofDesc;
 		this.sofStm = sofStm;
 		this.sofEtm = sofEtm;
 		this.crtTs = crtTs;

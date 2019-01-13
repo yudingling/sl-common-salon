@@ -8,7 +8,7 @@ public class SlShopEvent implements Serializable {
 	private static final long serialVersionUID = 5943593761041418473L;
 	@Id
 	private Long eventId;
-	private Long eventNm;
+	private String eventNm;
 	private String bdId;
 	private Long shopId;
 	private Long eventImg;
@@ -24,10 +24,10 @@ public class SlShopEvent implements Serializable {
 	public void setEventId(Long eventId) {
 		this.eventId = eventId;
 	}
-	public Long getEventNm() {
+	public String getEventNm() {
 		return eventNm;
 	}
-	public void setEventNm(Long eventNm) {
+	public void setEventNm(String eventNm) {
 		this.eventNm = eventNm;
 	}
 	public String getBdId() {
@@ -89,7 +89,7 @@ public class SlShopEvent implements Serializable {
 		super();
 	}
 	
-	public SlShopEvent(Long eventId, Long eventNm, String bdId, Long shopId,
+	public SlShopEvent(Long eventId, String eventNm, String bdId, Long shopId,
 			Long eventImg, String eventUrl, Long eventStm, Long eventEtm,
 			Integer eventAvailable, Long crtTs, Long uptTs) {
 		super();

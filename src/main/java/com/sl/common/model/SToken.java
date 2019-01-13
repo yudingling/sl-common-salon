@@ -7,6 +7,7 @@ public class SToken implements Serializable {
 	
 	private String brandId;
 	private Long userId;
+	private String weChatSessionKey;
 	private UserType userType;
 	
 	public String getBrandId() {
@@ -20,6 +21,12 @@ public class SToken implements Serializable {
 	}
 	public void setUserId(Long userId) {
 		this.userId = userId;
+	}
+	public String getWeChatSessionKey() {
+		return weChatSessionKey;
+	}
+	public void setWeChatSessionKey(String weChatSessionKey) {
+		this.weChatSessionKey = weChatSessionKey;
 	}
 	public UserType getUserType() {
 		return userType;
@@ -39,10 +46,11 @@ public class SToken implements Serializable {
 		this.userType = userType;
 	}
 	
-	public SToken(UserForToken token) {
+	public SToken(UserForToken token, String weChatSessionKey) {
 		super();
 		this.brandId = token.getBdId();
 		this.userId = token.getuId();
+		this.weChatSessionKey = weChatSessionKey;
 		this.userType = UserType.valueOf(token.getRoleId());
 	}
 }
