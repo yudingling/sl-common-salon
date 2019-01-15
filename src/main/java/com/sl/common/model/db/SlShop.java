@@ -16,8 +16,8 @@ public class SlShop implements Serializable {
 	private String shopLocation;
 	private String shopPhone;
 	private String shopWechatpayId;
-	private Double shopStm;
-	private Double shopEtm;
+	private String shopStm;
+	private String shopEtm;
 	private Long crtTs;
 	private Long uptTs;
 	
@@ -75,16 +75,16 @@ public class SlShop implements Serializable {
 	public void setShopWechatpayId(String shopWechatpayId) {
 		this.shopWechatpayId = shopWechatpayId;
 	}
-	public Double getShopStm() {
+	public String getShopStm() {
 		return shopStm;
 	}
-	public void setShopStm(Double shopStm) {
+	public void setShopStm(String shopStm) {
 		this.shopStm = shopStm;
 	}
-	public Double getShopEtm() {
+	public String getShopEtm() {
 		return shopEtm;
 	}
-	public void setShopEtm(Double shopEtm) {
+	public void setShopEtm(String shopEtm) {
 		this.shopEtm = shopEtm;
 	}
 	public Long getCrtTs() {
@@ -106,7 +106,7 @@ public class SlShop implements Serializable {
 	
 	public SlShop(Long shopId, String shopNm, String bdId, Integer shopEnable,
 			Double shopLgtd, Double shopLttd, String shopLocation, String shopPhone,
-			String shopWechatpayId, Double shopStm, Double shopEtm, Long crtTs, Long uptTs) {
+			String shopWechatpayId, String shopStm, String shopEtm, Long crtTs, Long uptTs) {
 		super();
 		this.shopId = shopId;
 		this.shopNm = shopNm;
