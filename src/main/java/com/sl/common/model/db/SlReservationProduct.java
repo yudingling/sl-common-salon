@@ -11,6 +11,7 @@ public class SlReservationProduct implements Serializable {
 	private Long rvId;
 	private Long pdtpId;
 	private Long pdId;
+	private Long rvUid;
 	private Long crtTs;
 	private Long uptTs;
 	public Long getRvpId() {
@@ -37,6 +38,12 @@ public class SlReservationProduct implements Serializable {
 	public void setPdId(Long pdId) {
 		this.pdId = pdId;
 	}
+	public Long getRvUid() {
+		return rvUid;
+	}
+	public void setRvUid(Long rvUid) {
+		this.rvUid = rvUid;
+	}
 	public Long getCrtTs() {
 		return crtTs;
 	}
@@ -55,12 +62,13 @@ public class SlReservationProduct implements Serializable {
 	}
 	
 	public SlReservationProduct(Long rvpId, Long rvId, Long pdtpId, Long pdId,
-			Long crtTs, Long uptTs) {
+			Long rvUid, Long crtTs, Long uptTs) {
 		super();
 		this.rvpId = rvpId;
 		this.rvId = rvId;
 		this.pdtpId = pdtpId;
 		this.pdId = pdId;
+		this.rvUid = rvUid;
 		this.crtTs = crtTs;
 		this.uptTs = uptTs;
 	}
