@@ -26,6 +26,7 @@ public class SlOrder implements Serializable {
 	private Long odPaiedTs;
 	private String odPaiedTp;
 	private Integer odComplaint;
+	private Integer odConfirm;
 	private Long crtTs;
 	private Long uptTs;
 	
@@ -143,6 +144,12 @@ public class SlOrder implements Serializable {
 	public void setOdComplaint(Integer odComplaint) {
 		this.odComplaint = odComplaint;
 	}
+	public Integer getOdConfirm() {
+		return odConfirm;
+	}
+	public void setOdConfirm(Integer odConfirm) {
+		this.odConfirm = odConfirm;
+	}
 	public Long getCrtTs() {
 		return crtTs;
 	}
@@ -165,7 +172,7 @@ public class SlOrder implements Serializable {
 			Double odPjPrice, Double odPdPrice, Double odTotalPrice,
 			Double odDiscount, Double odOfferPrice, Double odVoucherPrice,
 			Double odPayPrice, Integer odPaied, Long odPaiedTs,
-			String odPaiedTp, Integer odComplaint, Long crtTs, Long uptTs) {
+			String odPaiedTp, Integer odComplaint, Integer odConfirm, Long crtTs, Long uptTs) {
 		super();
 		this.odId = odId;
 		this.rvId = rvId;
@@ -186,6 +193,7 @@ public class SlOrder implements Serializable {
 		this.odPaiedTs = odPaiedTs;
 		this.odPaiedTp = odPaiedTp;
 		this.odComplaint = odComplaint;
+		this.odConfirm = odConfirm;
 		this.crtTs = crtTs;
 		this.uptTs = uptTs;
 	}
