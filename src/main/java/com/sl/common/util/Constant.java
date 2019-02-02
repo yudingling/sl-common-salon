@@ -19,4 +19,10 @@ public class Constant {
 	 */
 	private static final String LOCK_PREFIX = REDIS_PREFIX + "lock:";
 	public static final String LOCK_PREFIX_RESERVATION = LOCK_PREFIX + "resv_";
+	
+	/**
+	 * rabbitMq queue name
+	 */
+	public static final String RABBIT_PREFIX = "salon:";
+	public static final String RABBIT_FANOUT_WESOCKETMSG = RABBIT_PREFIX + "fanout:wsmsg";
 }
