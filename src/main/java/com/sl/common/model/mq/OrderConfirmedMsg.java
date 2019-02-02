@@ -1,11 +1,13 @@
 package com.sl.common.model.mq;
 
+import com.sl.common.model.OrderConfirmStatus;
+
 public class OrderConfirmedMsg implements WebSocketMsg {
 	private static final long serialVersionUID = 4695345940715918563L;
 	
 	private Long uid;
 	private Long odId;
-	private Boolean confirmed;
+	private OrderConfirmStatus confirmed;
 	private String msg;
 	
 	public Long getUid() {
@@ -20,10 +22,10 @@ public class OrderConfirmedMsg implements WebSocketMsg {
 	public void setOdId(Long odId) {
 		this.odId = odId;
 	}
-	public Boolean getConfirmed() {
+	public OrderConfirmStatus getConfirmed() {
 		return confirmed;
 	}
-	public void setConfirmed(Boolean confirmed) {
+	public void setConfirmed(OrderConfirmStatus confirmed) {
 		this.confirmed = confirmed;
 	}
 	public String getMsg() {
@@ -37,7 +39,7 @@ public class OrderConfirmedMsg implements WebSocketMsg {
 		super();
 	}
 	
-	public OrderConfirmedMsg(Long uid, Long odId, Boolean confirmed, String msg) {
+	public OrderConfirmedMsg(Long uid, Long odId, OrderConfirmStatus confirmed, String msg) {
 		super();
 		this.uid = uid;
 		this.odId = odId;
@@ -46,6 +48,6 @@ public class OrderConfirmedMsg implements WebSocketMsg {
 	}
 	
 	public OrderConfirmedMsg(Long uid, Long odId) {
-		this(uid, odId, true, null);
+		this(uid, odId, OrderConfirmStatus.CONFIRMED, null);
 	}
 }
