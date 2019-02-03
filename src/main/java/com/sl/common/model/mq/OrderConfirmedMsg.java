@@ -9,6 +9,7 @@ public class OrderConfirmedMsg implements WebSocketMsg {
 	private Long odId;
 	private OrderConfirmStatus confirmed;
 	private String msg;
+	private Object data;
 	
 	public Long getUid() {
 		return uid;
@@ -33,6 +34,14 @@ public class OrderConfirmedMsg implements WebSocketMsg {
 	}
 	public void setMsg(String msg) {
 		this.msg = msg;
+	}
+	
+	public Object getData() {
+		return data;
+	}
+	
+	public void setData(Object data) {
+		this.data = data;
 	}
 	
 	public OrderConfirmedMsg(){
