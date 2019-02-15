@@ -107,4 +107,19 @@ public class SlUserLevel implements Serializable {
 		this.crtTs = crtTs;
 		this.uptTs = uptTs;
 	}
+	
+	public SlUserLevel(Long ulId, SlUserLevelOrder order) {
+		super();
+		Long ts = System.currentTimeMillis();
+		
+		this.ulId = ulId;
+		this.uId = order.getuId();
+		this.levelId = order.getLevelId();
+		this.ulStm = order.getUlodStm();
+		this.ulEtm = order.getUlodEtm();
+		this.ulDiscount = order.getUlodDiscount();
+		this.ulAvailable = 1;
+		this.crtTs = ts;
+		this.uptTs = ts;
+	}
 }

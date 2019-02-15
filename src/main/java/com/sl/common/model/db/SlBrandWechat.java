@@ -11,6 +11,7 @@ public class SlBrandWechat implements Serializable {
 	private String bdId;
 	private String bdwAppid;
 	private String bdwSecret;
+	private String bdwWechatpayId;
 	private Long crtTs;
 	private Long uptTs;
 	
@@ -38,6 +39,12 @@ public class SlBrandWechat implements Serializable {
 	public void setBdwSecret(String bdwSecret) {
 		this.bdwSecret = bdwSecret;
 	}
+	public String getBdwWechatpayId() {
+		return bdwWechatpayId;
+	}
+	public void setBdwWechatpayId(String bdwWechatpayId) {
+		this.bdwWechatpayId = bdwWechatpayId;
+	}
 	public Long getCrtTs() {
 		return crtTs;
 	}
@@ -56,12 +63,13 @@ public class SlBrandWechat implements Serializable {
 	}
 	
 	public SlBrandWechat(Long bdwId, String bdId, String bdwAppid,
-			String bdwSecret, Long crtTs, Long uptTs) {
+			String bdwSecret, String bdwWechatpayId, Long crtTs, Long uptTs) {
 		super();
 		this.bdwId = bdwId;
 		this.bdId = bdId;
 		this.bdwAppid = bdwAppid;
 		this.bdwSecret = bdwSecret;
+		this.bdwWechatpayId = bdwWechatpayId;
 		this.crtTs = crtTs;
 		this.uptTs = uptTs;
 	}
